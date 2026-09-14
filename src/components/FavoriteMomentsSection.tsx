@@ -16,14 +16,14 @@ const LEFT_MOMENTS: MomentCardData[] = [
     image: '/moment-celestial.jpg',
     alt: 'Scent Stellar Celestial Flacon in Paris Morning Sunlight',
     description:
-      'A light and refreshing fragrance with clean notes, perfect for everyday confidence and effortless style.',
+      'Crisp, radiant floral notes crafted for effortless everyday confidence.',
   },
   {
     id: 'ash-night',
     image: '/moment-ash.jpg',
     alt: 'Scent Stellar Ash Flacon with Golden Mist in Candlelight',
     description:
-      'A deep and intense scent crafted for the night, blending richness and elegance for a lasting impression.',
+      'Deep, smoky woods and golden amber crafted for the night.',
   },
 ];
 
@@ -32,7 +32,7 @@ const CENTER_MOMENT: MomentCardData = {
   image: '/moment-zentus.jpg',
   alt: 'Scent Stellar Zentus Flacon Spritzing Golden Fragrance Mist in Luxury Hall',
   description:
-    'A smooth and refined aroma with subtle warmth, designed to elevate your presence with sophistication.',
+    'Refined noble oudh and bergamot to elevate your presence.',
 };
 
 const RIGHT_MOMENTS: MomentCardData[] = [
@@ -41,14 +41,14 @@ const RIGHT_MOMENTS: MomentCardData[] = [
     image: '/moment-flora.jpg',
     alt: 'Scent Stellar Flora Flacon Spritzing Rose Mist Overlooking Eiffel Tower',
     description:
-      'A bold and energetic fragrance with rich undertones, ideal for making a strong and confident statement.',
+      'Grasse centifolia roses and pink pepper for radiant elegance.',
   },
   {
     id: 'chrome-aquatic',
     image: '/moment-chrome.jpg',
     alt: 'Scent Stellar Chrome Flacon with Fresh Radiant Mist',
     description:
-      'A cool and calming scent with fresh aquatic notes, perfect for a relaxed and modern feel.',
+      'Fresh silver cedar and cool aquatic notes with modern sillage.',
   },
 ];
 
@@ -66,8 +66,7 @@ export const FavoriteMomentsSection: React.FC = () => {
               Refined Scents <span className="moments-pink-italic">for Every Moment</span>
             </h2>
             <p className="moments-subtitle">
-              Curated olfactory journeys captured in fleeting moments of luxury, <br />
-              crafted to evoke unforgettable memories that linger for a lifetime.
+              Curated olfactory journeys crafted to evoke unforgettable impressions.
             </p>
           </header>
         </Reveal>

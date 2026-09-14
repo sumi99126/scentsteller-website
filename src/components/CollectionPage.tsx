@@ -120,7 +120,7 @@ export const CollectionPage: React.FC<CollectionPageProps> = ({ onAddToCart, onB
                   <span className="collection-pink-italic title-line-2">Collection</span>
                 </h1>
                 <p className="collection-page-subtitle">
-                  Explore our full portfolio of micro-batched extraits crafted with pure botanical absolutes and noble Cambodian oudh.
+                  Explore our portfolio of micro-batched extraits crafted with noble botanicals and aged oudh.
                 </p>
               </div>
             </div>

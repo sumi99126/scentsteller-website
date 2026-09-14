@@ -36,7 +36,7 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({ onExploreClick }) => {
               </h2>
 
               <p className="cta-subheading">
-                Micro-batched extraits crafted with Cambodian agarwood, pure Taif roses, and rare amber.
+                Micro-batched extraits crafted with noble Cambodian oudh, pure Taif roses, and rare amber.
               </p>
 
               <button

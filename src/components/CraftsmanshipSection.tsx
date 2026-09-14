@@ -12,17 +12,17 @@ const LEFT_CALLOUTS: CraftCallout[] = [
   {
     id: 'delivery',
     title: 'DIRECT DELIVERY',
-    description: 'Freshly bottled and delivered straight from our laboratory.',
+    description: 'Directly dispatched from our artisanal atelier.',
   },
   {
     id: 'lasting',
     title: 'LONG-LASTING SCENTS',
-    description: '30% high perfume concentration for 12+ hours sillage.',
+    description: '30% pure extrait for 14+ hours sillage.',
   },
   {
     id: 'eco',
     title: 'ECO-FRIENDLY PACKAGING',
-    description: 'Recyclable luxury flacons and sustainable shipping materials.',
+    description: 'Recyclable crystal flacons and sustainable boxing.',
   },
 ];
 
@@ -30,17 +30,17 @@ const RIGHT_CALLOUTS: CraftCallout[] = [
   {
     id: 'ingredients',
     title: 'PREMIUM INGREDIENTS',
-    description: 'Pure French botanicals, Taif roses & noble Cambodian oudh.',
+    description: 'Taif roses, Grasse flora, and noble Cambodian oudh.',
   },
   {
     id: 'artisan',
     title: 'ARTISANAL BLENDING',
-    description: 'Micro-batched with meticulous precision by master noses.',
+    description: 'Micro-batched with precision by master perfumers.',
   },
   {
     id: 'shipping',
     title: 'NATIONWIDE COD',
-    description: 'Cash on Delivery and safe shipping across all of Pakistan.',
+    description: 'Safe express delivery across all of Pakistan.',
   },
 ];
 
@@ -58,8 +58,7 @@ export const CraftsmanshipSection: React.FC = () => {
               Scent <span className="craft-italic-of">of</span> Elegance
             </h2>
             <p className="craft-subtitle">
-              Every bottle of Scent Stellar is a testament to uncompromising artistry,
-              formulated with rare botanical essences and delivered with sustainable luxury.
+              Uncompromising artisanal extraits formulated with rare botanical absolutes and noble oudh.
             </p>
           </header>
         </Reveal>

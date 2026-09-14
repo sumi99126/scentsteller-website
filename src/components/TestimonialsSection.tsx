@@ -16,7 +16,7 @@ const TESTIMONIALS: TestimonialItem[] = [
   {
     id: 'guy-hawkins',
     quote:
-      'Impressed by the craftsmanship and attention to detail. Flora lasts effortlessly from day to night with unmatched royal elegance.',
+      'Impressed by the craftsmanship. Flora lasts effortlessly from morning to night with unmatched elegance.',
     author: 'Guy Hawkins',
     handle: '@guyhawkins',
     role: 'Verified Collector',
@@ -25,7 +25,7 @@ const TESTIMONIALS: TestimonialItem[] = [
   {
     id: 'karla-lynn',
     quote:
-      'A seamless luxury experience from start to finish. Zentus is by far the richest oud and bergamot blend I have ever owned. Highly recommend!',
+      'A seamless luxury experience. Zentus is by far the richest oud and bergamot blend I have ever owned.',
     author: 'Karla Lynn',
     handle: '@karlalynn98',
     role: 'Fragrance Connoisseur',
@@ -34,7 +34,7 @@ const TESTIMONIALS: TestimonialItem[] = [
   {
     id: 'jane-cooper',
     quote:
-      'Reliable, mesmerizing, and truly regal. Ash Doré garners compliments everywhere I go. Made finding my signature scent effortless!',
+      'Mesmerizing and truly regal. Ash Doré garners compliments everywhere I go.',
     author: 'Jane Cooper',
     handle: '@janecooper',
     role: 'Patron of Elegance',
@@ -43,7 +43,7 @@ const TESTIMONIALS: TestimonialItem[] = [
   {
     id: 'elena-rostova',
     quote:
-      'An unforgettable sensory experience. Celestial is pure perfection in a flacon, fresh yet intensely magnetic with lingering sillage.',
+      'Pure perfection in a flacon. Celestial is fresh yet intensely magnetic with lingering sillage.',
     author: 'Elena Rostova',
     handle: '@elenarostova',
     role: 'Perfume Enthusiast',
@@ -52,7 +52,7 @@ const TESTIMONIALS: TestimonialItem[] = [
   {
     id: 'marcus-vance',
     quote:
-      'The projection and longevity are extraordinary. True artisanal perfumery that commands admiration and presence in any room.',
+      'Extraordinary projection and longevity. True artisanal perfumery that commands presence.',
     author: 'Marcus Vance',
     handle: '@marcusvance',
     role: 'Luxury Fragrance Critic',

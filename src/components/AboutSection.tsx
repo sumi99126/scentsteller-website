@@ -66,10 +66,10 @@ export const AboutSection: React.FC = () => {
             </h2>
 
             <p className="about-editorial-text">
-              <strong>Rooted in the prestigious legacy of Grasse and Paris</strong>, Scent Stellar
-              harmonizes rare centifolia rose petals, nocturnal smoky woods, and radiant amber accords.
-              Each formulation is <em>a bespoke olfactory masterpiece</em> — a luminous, long-lasting aura
-              crafted to evoke deep emotion, treasured memories, and effortless personal distinction.
+              <strong>Rooted in the legacy of Grasse and Paris</strong>, Scent Stellar
+              harmonizes rare botanical absolutes, noble woods, and radiant amber.
+              Each creation is a bespoke extrait — crafted to leave an unforgettable,
+              effortless signature.
             </p>
           </Reveal>
         </div>

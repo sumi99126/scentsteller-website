@@ -15,31 +15,31 @@ const FAQ_DATA: FaqItem[] = [
     id: 'enduring-extraits',
     question: 'What makes Scent Stellar extraits so enduring?',
     answer:
-      'Our fragrances are handcrafted at an exceptional 28%–32% Extrait de Parfum concentration. Blended with rare aged amber, natural botanical absolutes from Grasse, and sustainably sourced woods, each creation delivers a 14+ hour lingering projection that evolves gracefully throughout the day.',
+      'Handcrafted at 28%–32% Extrait de Parfum concentration with aged amber and Grasse absolutes, delivering 14+ hours of lasting projection.',
   },
   {
     id: 'delivery-pakistan',
     question: 'Do you deliver across Pakistan and offer Cash on Delivery?',
     answer:
-      'Yes! We provide express nationwide delivery and Cash on Delivery (COD) across all cities in Pakistan, including Karachi, Lahore, Islamabad, Rawalpindi, Faisalabad, Multan, and Peshawar. Parcels are safely packed in protective presentation boxes and delivered within 2–4 business days with full SMS tracking.',
+      'Yes. We provide express delivery and Cash on Delivery (COD) nationwide across Pakistan in 2–4 business days with full SMS tracking.',
   },
   {
     id: 'discovery-samples',
     question: 'Are complimentary discovery samples included with every order?',
     answer:
-      'Every full-size 100ml flacon order arrives with two complimentary 2ml deluxe discovery atomizers of your choice. This allows you to explore our wider haute perfumery portfolio from the comfort of your home.',
+      'Every 100ml flacon includes two complimentary 2ml deluxe discovery atomizers of your choice.',
   },
   {
     id: 'whatsapp-concierge',
     question: 'Can I place an order directly via WhatsApp Concierge?',
     answer:
-      'Certainly. Our private Fragrance Sommelier Concierge is available 24/7 on WhatsApp to provide tailored scent consultations, bespoke royal gift wrapping, corporate orders, and instantaneous order placement with discreet payment options.',
+      'Yes. Our WhatsApp Concierge is available 24/7 for scent consultations, bespoke gifting, and instant order placement.',
   },
   {
     id: 'storage-flacon',
     question: 'How should I store my luxury perfume flacon?',
     answer:
-      'To preserve the intricate aromatic compounds and pure essential oils, we recommend storing your Scent Stellar flacon upright in a cool, shaded environment away from direct sunlight and sudden temperature shifts. Our heavy crystal glass bottles are specifically engineered to safeguard the delicate elixir within.',
+      'Store your flacon upright in a cool, shaded environment away from direct sunlight to preserve the pure botanical oils.',
   },
 ];
 
@@ -67,8 +67,7 @@ export const FaqSection: React.FC = () => {
               Everything About <span className="faq-pink-italic">Our Fragrances</span>
             </h2>
             <p className="faq-subtitle">
-              Explore clarity on our bespoke blends, artisanal formulations, and royal concierge services, <br />
-              crafted to guide your journey into high-perfumery excellence.
+              Clarity on our bespoke blends, express delivery, and concierge services.
             </p>
           </header>
         </Reveal>

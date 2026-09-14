@@ -40,7 +40,7 @@ export const Footer: React.FC = () => {
               />
             </div>
             <p className="footer-brand-tagline">
-              Crafting transcendent haute parfumerie through rare botanical absolutes, Cambodian agarwood, and pure French craftsmanship. An unforgettable signature for your presence.
+              Haute parfumerie crafted with rare botanical absolutes and noble Cambodian oudh. A signature for your presence.
             </p>
             <div className="footer-social-links">
               <a
@@ -107,11 +107,11 @@ export const Footer: React.FC = () => {
                   <span>WhatsApp Concierge</span>
                 </a>
               </li>
-              <li><a href="#faq">Cash on Delivery (COD) Nationwide</a></li>
-              <li><a href="#faq">Express Courier Across Pakistan (2–4 Days)</a></li>
+              <li><a href="#faq">Cash on Delivery (COD)</a></li>
+              <li><a href="#faq">Express Courier (2–4 Days)</a></li>
               <li><a href="#faq">Discovery Samples Policy</a></li>
-              <li><a href="#faq">Authenticity & Flacon Care</a></li>
-              <li><a href="#faq">Corporate Fragrance Orders</a></li>
+              <li><a href="#faq">Flacon Care Guide</a></li>
+              <li><a href="#faq">Corporate Gifting</a></li>
             </ul>
           </div>
 
@@ -122,7 +122,7 @@ export const Footer: React.FC = () => {
               <Sparkles size={14} className="footer-sparkle" />
             </h4>
             <p className="footer-newsletter-text">
-              Subscribe to receive confidential invitations to limited micro-batch drops, private fragrance unveilings, and seasonal giftings.
+              Receive private invitations to limited micro-batch drops and seasonal releases.
             </p>
 
             <form className="footer-newsletter-form" onSubmit={handleSubscribe}>

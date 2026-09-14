@@ -26,7 +26,7 @@ export const FRAGRANCES: FragranceProduct[] = [
     accords: 'Blushing Rose & Peony',
     subtitle: 'Centifolia Rose • Velvet Peony • Pink Pepper',
     description:
-      'An intoxicating bouquet of Grasse centifolia roses, blooming peony, and sparkling pink pepper. A sensual, delicate whisper of French haute parfumerie on the skin.',
+      'Grasse centifolia roses, velvet peony, and pink pepper crafted for effortless elegance.',
     bottleImg: '/bottle-flora.png',
     accentColor: '#c75168',
     bgGradient: 'linear-gradient(135deg, #FAF1ED 0%, #F8E6EA 42%, #F3D7DE 100%)',
@@ -41,7 +41,7 @@ export const FRAGRANCES: FragranceProduct[] = [
     accords: 'Charred Wood & Amber',
     subtitle: 'Smoky Cedarwood • Bourbon • Dark Amber',
     description:
-      'Intense, enigmatic, and magnetic. A nocturnal fusion of charred birchwood, bourbon tobacco, golden labdanum, and velvety spice crafted for an unforgettable aura.',
+      'A nocturnal fusion of charred birchwood, bourbon, and dark amber crafted for a lasting impression.',
     bottleImg: '/bottle-ash.png',
     accentColor: '#b8863b',
     bgGradient: 'linear-gradient(135deg, #FAF4EB 0%, #F5E8D6 42%, #EBD5BC 100%)',
@@ -56,7 +56,7 @@ export const FRAGRANCES: FragranceProduct[] = [
     accords: 'Exotic Orchid & Nectar',
     subtitle: 'Nocturnal Orchid • Honey Nectar • Sandalwood',
     description:
-      'Opulent, radiant, and endlessly captivating. Rare nocturnal orchids laced with luminous honey nectar and silky sandalwood for moments of pure distinction.',
+      'Nocturnal orchids laced with honey nectar and warm sandalwood for moments of pure distinction.',
     bottleImg: '/bottle-bloom.png',
     accentColor: '#ae4d6f',
     bgGradient: 'linear-gradient(135deg, #FAF1EE 0%, #F6E3DB 42%, #EDCCBF 100%)',
