@@ -1,0 +1,125 @@
+/* ==========================================================================
+   SCENTS STELLAR - FLOATING PILL NAVBAR (MATCHING REFERENCE MOCKO)
+   ========================================================================== */
+
+.mocko-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 32px;
+  position: relative;
+  z-index: 50;
+  background: transparent;
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.mocko-navbar-pill {
+  width: 100%;
+  max-width: 1320px;
+  height: 58px;
+  background: #ffffff;
+  border-radius: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  box-shadow: 0 2px 12px rgba(180, 110, 125, 0.06);
+  border: 1px solid rgba(199, 81, 104, 0.12);
+  transition: box-shadow 0.3s ease;
+}
+
+.mocko-navbar-pill:hover {
+  box-shadow: 0 6px 26px rgba(180, 110, 125, 0.1), 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.nav-circle-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  background: #ffffff;
+  color: #1a1816;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.nav-circle-btn:hover {
+  background: #fbf9f8;
+  transform: scale(1.04);
+  border-color: rgba(0, 0, 0, 0.15);
+  color: #000000;
+}
+
+.nav-center-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.navbar-brand-logo {
+  height: 40px; /* Larger, clearer brand logo */
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navbar-brand-logo:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+.nav-cart-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 7px;
+  height: 7px;
+  background: #d8687a;
+  border-radius: 50%;
+  border: 1.5px solid #ffffff;
+}
+
+.nav-cart-badge-count {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  min-width: 17px;
+  height: 17px;
+  background: #c75168;
+  color: #ffffff;
+  border-radius: 999px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  border: 1.5px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(199, 81, 104, 0.4);
+}
+
+@media (max-width: 768px) {
+  .mocko-header {
+    padding: 16px 16px 0;
+  }
+  .mocko-navbar-pill {
+    height: 54px;
+    padding: 0 6px;
+  }
+  .nav-circle-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .navbar-brand-logo {
+    height: 26px;
+  }
+}

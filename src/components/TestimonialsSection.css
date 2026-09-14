@@ -1,0 +1,411 @@
+/* ==========================================================================
+   SCENTS STELLAR - TRANSFORMATIVE CLIENT EXPERIENCES (TESTIMONIALS SECTION)
+   Theme: Luxury Soft Light-Pink Palette (#fdf7f8 / #f9edf1) & White-Pink Cards
+   5 Cards Continuous Loop Carousel (No Nav Arrows, Clean Notched Profile Shelf)
+   ========================================================================== */
+
+.testimonials-section {
+  width: 100%;
+  background: linear-gradient(180deg, #fdf7f8 0%, #f9edf1 50%, #fdf7f8 100%);
+  padding: 95px 32px 105px;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+
+  /* Responsive card sizing variables */
+  --card-gap: 28px;
+  --card-width: calc((100% - 56px) / 3);
+}
+
+/* Ambient Soft Light-Pink Backlight Auras */
+.testimonials-ambient-glow {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 550px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(199, 81, 104, 0.09) 0%,
+    rgba(249, 237, 241, 0) 70%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.testimonials-ambient-glow-secondary {
+  position: absolute;
+  bottom: 0%;
+  right: 15%;
+  width: 500px;
+  height: 350px;
+  background: radial-gradient(
+    circle at center,
+    rgba(184, 134, 59, 0.06) 0%,
+    rgba(253, 247, 248, 0) 70%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.testimonials-container {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  gap: 48px;
+}
+
+/* ==========================================================================
+   HEADER: Centered Eyebrow Badge & Title with Pink Italic Accent
+   ========================================================================== */
+
+.testimonials-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 750px;
+}
+
+.testimonials-badge {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  color: #c75168;
+  background: #fae4ea;
+  border: 1px solid rgba(199, 81, 104, 0.28);
+  border-radius: 999px;
+  padding: 7px 22px;
+  box-shadow: 0 2px 8px rgba(199, 81, 104, 0.1);
+}
+
+.testimonials-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 500;
+  letter-spacing: -0.3px;
+  color: #171412;
+  line-height: 1.2;
+  margin: 16px 0 0;
+}
+
+.testimonials-pink-italic {
+  font-style: italic;
+  font-weight: 400;
+  color: #c75168; /* Signature brand pink accent */
+}
+
+/* ==========================================================================
+   CAROUSEL WRAPPER WITH CONTINUOUS INFINITE SLIDING VIEWPORT
+   ========================================================================== */
+
+.testimonials-reveal-wrapper {
+  width: 100%;
+  max-width: 100%;
+}
+
+.testimonials-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sliding Window Viewport */
+.testimonials-viewport {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 16px 0 24px; /* Room for shadow and hover lift */
+  container-type: inline-size;
+}
+
+/* Continuous Sliding Track */
+.testimonials-track {
+  display: flex;
+  gap: var(--card-gap, 28px);
+  will-change: transform;
+}
+
+/* Individual Testimonial Card (Guaranteed 3 Cards in 1 Row on Desktop) */
+.testimonial-card {
+  box-sizing: border-box;
+  flex: 0 0 calc((100cqw - 56px) / 3);
+  width: calc((100cqw - 56px) / 3);
+  min-width: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease;
+  cursor: pointer;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Main Card Upper Body - Crisp White with Delicate Soft Pink Border & Shadow */
+.testimonial-card-body {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(199, 81, 104, 0.16);
+  border-radius: 24px 24px 24px 0; /* Bottom left seamlessly extends into profile notch */
+  padding: 34px 30px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 10px 30px rgba(199, 81, 104, 0.08), 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  flex: 1;
+  z-index: 1;
+}
+
+.testimonial-card:hover .testimonial-card-body {
+  border-color: rgba(199, 81, 104, 0.4);
+  box-shadow: 0 16px 38px rgba(199, 81, 104, 0.14), 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* Featured / Active Centered Card Highlight */
+.testimonial-card.card-featured .testimonial-card-body {
+  border-color: #c75168;
+  box-shadow: 0 18px 45px rgba(199, 81, 104, 0.18), 0 4px 14px rgba(0, 0, 0, 0.04);
+  background: linear-gradient(180deg, #ffffff 0%, #fffbfc 100%);
+}
+
+/* Oversized Quote Icon */
+.testimonial-quote-icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #fdf0f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c75168;
+  border: 1px solid rgba(199, 81, 104, 0.18);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card.card-featured .testimonial-quote-icon-wrap,
+.testimonial-card:hover .testimonial-quote-icon-wrap {
+  background: #c75168;
+  color: #ffffff;
+}
+
+.testimonial-quote-icon {
+  opacity: 0.95;
+}
+
+/* 5-Star Rating */
+.testimonial-stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star-icon-filled {
+  color: #e5a43b;
+  fill: #e5a43b;
+}
+
+/* Testimonial Quote Text - Crisp and High Legibility */
+.testimonial-quote-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14.5px;
+  font-weight: 400;
+  line-height: 1.72;
+  color: #2b2320;
+  margin: 0;
+  min-height: 84px;
+}
+
+/* ==========================================================================
+   NOTCHED BOTTOM SHELF: Seamless White Integration with ZERO Cut Line
+   ========================================================================== */
+
+.testimonial-author-notch {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  margin-top: -3px; /* Overlaps bottom border of card body completely */
+  z-index: 3; /* Always renders on top of the card body to hide the seam line */
+}
+
+.author-notch-inner {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: #ffffff;
+  border-left: 1px solid rgba(199, 81, 104, 0.16);
+  border-bottom: 1px solid rgba(199, 81, 104, 0.16);
+  border-right: 1px solid rgba(199, 81, 104, 0.16);
+  border-top: none; /* NO top border line */
+  border-radius: 0 0 20px 20px;
+  padding: 10px 22px 14px 14px;
+  box-shadow: 0 8px 22px rgba(199, 81, 104, 0.08);
+  transition: all 0.3s ease;
+}
+
+/* Solid white bridge covering any boundary line at the junction */
+.author-notch-inner::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: #ffffff;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.testimonial-card:hover .author-notch-inner {
+  border-color: rgba(199, 81, 104, 0.4);
+}
+
+.testimonial-card.card-featured .author-notch-inner {
+  border-color: #c75168;
+  box-shadow: 0 12px 28px rgba(199, 81, 104, 0.16);
+}
+
+.author-avatar-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(199, 81, 104, 0.35);
+  flex-shrink: 0;
+  box-shadow: 0 3px 8px rgba(199, 81, 104, 0.2);
+  position: relative;
+  z-index: 6;
+}
+
+.author-text-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  position: relative;
+  z-index: 6;
+}
+
+.author-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #171412;
+  margin: 0;
+  letter-spacing: 0.2px;
+}
+
+.author-handle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11.5px;
+  font-weight: 400;
+  color: #8c7971;
+}
+
+/* Concave Fillet Curve (Smooth Inverted Radius matching white background) */
+.notch-corner-fillet {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  background: transparent;
+  pointer-events: none;
+  margin-top: 1px;
+  z-index: 3;
+}
+
+.notch-corner-fillet::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-left-radius: 16px;
+  box-shadow: -6px -6px 0 0 #ffffff;
+}
+
+/* ==========================================================================
+   CAROUSEL PAGINATION: 5 Auto-Moving Dots matching 5 Reviews
+   ========================================================================== */
+
+.testimonials-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.pagination-dot {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  height: 5px;
+  width: 7px;
+  border-radius: 999px;
+  background: rgba(199, 81, 104, 0.25);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pagination-dot:hover {
+  background: rgba(199, 81, 104, 0.55);
+}
+
+.pagination-dot.active {
+  width: 28px;
+  background: linear-gradient(135deg, #c75168 0%, #b8863b 100%);
+  box-shadow: 0 2px 8px rgba(199, 81, 104, 0.35);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 1060px) {
+  .testimonials-section {
+    --card-gap: 22px;
+    --card-width: calc((100% - 22px) / 2);
+  }
+  .testimonial-card {
+    flex: 0 0 calc((100cqw - 22px) / 2);
+    width: calc((100cqw - 22px) / 2);
+  }
+}
+
+@media (max-width: 720px) {
+  .testimonials-section {
+    padding: 75px 20px 85px;
+    --card-gap: 16px;
+    --card-width: 100%;
+  }
+  .testimonial-card {
+    flex: 0 0 100cqw;
+    width: 100cqw;
+  }
+  .testimonials-container {
+    gap: 36px;
+  }
+  .testimonial-card-body {
+    padding: 26px 20px 20px;
+  }
+  .testimonial-quote-text {
+    font-size: 13.5px;
+    min-height: auto;
+  }
+}

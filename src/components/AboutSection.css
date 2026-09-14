@@ -1,0 +1,245 @@
+/* ==========================================================================
+   SCENTS STELLAR - ABOUT / PHILOSOPHY SECTION (MATCHING REFERENCE COLLAGE)
+   ========================================================================== */
+
+.about-stellar-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 100px 32px 105px; /* Ample breathing room between sections */
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.about-stellar-container {
+  width: 100%;
+  max-width: 1320px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: clamp(48px, 4.8vw, 68px); /* Elegant generous spacing between left images and right narrative */
+}
+
+/* ==========================================================================
+   LEFT: ASYMMETRIC 3-IMAGE EDITORIAL COLLAGE
+   ========================================================================== */
+
+.about-collage-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  position: relative;
+  width: fit-content;
+}
+
+/* Shared Card Styles with Rounded Corners and Soft Shadow */
+.collage-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #f5f0ec;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.collage-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.collage-card:hover .collage-img {
+  transform: scale(1.04);
+}
+
+/* Left Stack: Top Wood Bottle + Overlapping Bottom Woman Portrait */
+.collage-left-stack {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  position: relative;
+}
+
+/* Card 1: Minimalist Wood & Linen Bottle */
+.card-wood-bottle {
+  width: 215px;
+  height: 270px;
+  box-shadow: 0 16px 36px rgba(120, 80, 60, 0.09);
+  z-index: 1;
+}
+
+/* Card 2: Woman in Champagne Gown with Perfume (Overlapping) */
+.card-woman-portrait {
+  width: 215px;
+  height: 245px;
+  margin-top: -60px;
+  margin-left: 24px;
+  box-shadow: 0 20px 42px rgba(120, 80, 60, 0.14);
+  z-index: 2;
+  border: 4px solid #ffffff;
+}
+
+/* Right Stack: Golden Luxury Flacon in Sunlight */
+.collage-right-stack {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.card-golden-flacon {
+  width: 285px;
+  height: 400px;
+  box-shadow: 0 24px 50px rgba(140, 95, 45, 0.14);
+  z-index: 1;
+}
+
+/* ==========================================================================
+   RIGHT: EDITORIAL NARRATIVE & BRAND PHILOSOPHY
+   ========================================================================== */
+
+.about-narrative-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 530px;
+}
+
+/* Subtle Prestige Eyebrow */
+.about-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  color: #9e8979;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* Editorial Title with Italic Highlight (Playfair Display) */
+.about-editorial-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(28px, 3.2vw, 42px); /* Reduced and refined size as requested */
+  font-weight: 500;
+  line-height: 1.18;
+  color: #1a1715;
+  margin: 0 0 20px;
+  letter-spacing: -0.4px;
+}
+
+.about-italic-highlight {
+  font-style: italic;
+  font-weight: 400;
+  color: #c75168; /* Signature luxury pink matching brand theme */
+  display: inline-block;
+}
+
+/* Clean Narrative Copy */
+.about-editorial-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15.5px;
+  font-weight: 400;
+  line-height: 1.82;
+  color: #585047;
+  margin: 0;
+}
+
+.about-editorial-text strong {
+  font-weight: 600;
+  font-style: italic;
+  color: #211e1b;
+}
+
+.about-editorial-text em {
+  font-style: italic;
+  font-weight: 500;
+  color: #211e1b;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (TABLETS & MOBILE)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .about-stellar-container {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+  .about-collage-wrap {
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .about-narrative-col {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-stellar-section {
+    padding: 60px 16px;
+  }
+  .about-stellar-container {
+    gap: 36px;
+  }
+  /* Keep exact desktop 3-image collage composition, scaled responsively without separating */
+  .about-collage-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(10px, 3vw, 18px);
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  .collage-left-stack {
+    display: flex;
+    flex-direction: column;
+    width: clamp(125px, 38vw, 155px);
+    flex-shrink: 0;
+  }
+  .card-wood-bottle {
+    width: 100%;
+    height: clamp(150px, 44vw, 190px);
+    border-radius: 16px;
+    margin: 0;
+  }
+  .card-woman-portrait {
+    width: 100%;
+    height: clamp(135px, 40vw, 175px);
+    margin-top: clamp(-42px, -11vw, -30px);
+    margin-left: clamp(12px, 3.5vw, 18px);
+    border: 3px solid #ffffff;
+    border-radius: 16px;
+  }
+  .collage-right-stack {
+    display: flex;
+    align-items: center;
+    width: clamp(140px, 42vw, 185px);
+    flex-shrink: 0;
+  }
+  .card-golden-flacon {
+    width: 100%;
+    height: clamp(245px, 72vw, 320px);
+    border-radius: 18px;
+    margin: 0;
+  }
+  .about-narrative-col {
+    text-align: center;
+    align-items: center;
+  }
+  .about-editorial-title {
+    font-size: clamp(24px, 7vw, 32px);
+    line-height: 1.22;
+  }
+  .about-editorial-text {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+}

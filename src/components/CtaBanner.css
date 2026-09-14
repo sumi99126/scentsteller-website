@@ -1,0 +1,335 @@
+/* ==========================================================================
+   SCENTS STELLAR - SLEEK MINIMAL CTA BANNER
+   Compact height, refined quiet luxury aesthetic, flowing silk backdrop
+   ========================================================================== */
+
+.cta-banner-section {
+  width: 100%;
+  padding: 16px 32px 60px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  background: #ffffff;
+}
+
+.cta-banner-container {
+  width: 100%;
+  max-width: 1240px;
+}
+
+/* Compact, Balanced Cinematic Showcase Card */
+.cta-banner-card {
+  position: relative;
+  width: 100%;
+  min-height: 330px;
+  border-radius: 22px;
+  overflow: hidden;
+  background-color: #110e0d;
+  background-image: url('/cta-minimal-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 42px 58px;
+  box-shadow: 0 18px 50px rgba(18, 12, 10, 0.32), 0 3px 14px rgba(0, 0, 0, 0.14);
+  border: 1px solid rgba(199, 81, 104, 0.24);
+}
+
+/* Atmospheric Overlay */
+.cta-overlay-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    95deg,
+    rgba(14, 11, 10, 0.93) 0%,
+    rgba(17, 13, 11, 0.84) 42%,
+    rgba(20, 16, 14, 0.35) 75%,
+    rgba(20, 16, 14, 0.15) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   LEFT COLUMN: REFINED TYPOGRAPHY & BUTTON
+   ========================================================================== */
+
+.cta-content-col {
+  position: relative;
+  z-index: 5;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cta-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(21px, 2.3vw, 32px);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.5);
+}
+
+.cta-highlight-pink {
+  color: #ff9eb0;
+  font-style: italic;
+  font-weight: 500;
+  background: linear-gradient(135deg, #ff9eb0 0%, #df7488 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.cta-subheading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0 0 22px;
+  max-width: 440px;
+  letter-spacing: 0.15px;
+}
+
+/* Luxury Pill Button */
+.cta-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #d8ab62 0%, #b8863b 100%);
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  padding: 13px 30px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 6px 20px rgba(184, 134, 59, 0.35);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cta-action-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #e4ba72 0%, #c99547 100%);
+  box-shadow: 0 10px 26px rgba(216, 171, 98, 0.45);
+  color: #140f0c;
+}
+
+.cta-btn-arrow {
+  transition: transform 0.3s ease;
+}
+
+.cta-action-btn:hover .cta-btn-arrow {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   RIGHT SHOWCASE: COMPACT 3 FLACONS TRIO
+   ========================================================================== */
+
+.cta-flacons-stage {
+  position: relative;
+  z-index: 4;
+  width: 360px;
+  height: 240px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+.cta-bottle-wrap {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Bottle Shadows */
+.cta-bottle-shadow {
+  width: 60%;
+  height: 10px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.75) 0%, transparent 75%);
+  border-radius: 50%;
+  margin-top: -5px;
+}
+
+.master-shadow {
+  width: 75%;
+  height: 12px;
+}
+
+/* Bottle 1 (Left): Celestial */
+.bottle-celestial-wrap {
+  left: 10px;
+  bottom: 8px;
+  z-index: 2;
+  opacity: 0.95;
+}
+
+.celestial-bottle {
+  height: 152px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.75));
+}
+
+/* Bottle 2 (Center): Flora */
+.bottle-flora-wrap {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 22px;
+  z-index: 4;
+}
+
+.flora-bottle {
+  height: 180px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.8));
+  animation: minimalFloat 5s ease-in-out infinite alternate;
+}
+
+.cta-bottle-glow {
+  position: absolute;
+  bottom: 25px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(235, 182, 102, 0.28) 0%, transparent 70%);
+  z-index: -1;
+}
+
+/* Bottle 3 (Right): Zentus */
+.bottle-zentus-wrap {
+  right: 15px;
+  bottom: 12px;
+  z-index: 3;
+  opacity: 0.95;
+}
+
+.zentus-bottle {
+  height: 158px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.72));
+}
+
+@keyframes minimalFloat {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-6px); }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 860px) {
+  .cta-banner-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 46px 28px 32px;
+    min-height: auto;
+  }
+  .cta-content-col {
+    align-items: center;
+    max-width: 100%;
+    padding-top: 6px;
+  }
+  .cta-subheading {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .cta-flacons-stage {
+    width: 290px;
+    height: 185px;
+    margin-top: 38px; /* Dedicated separate breathing room above bottle imagery */
+    padding-top: 8px;
+  }
+  .celestial-bottle {
+    height: 135px;
+  }
+  .flora-bottle {
+    height: 162px;
+  }
+  .zentus-bottle {
+    height: 138px;
+  }
+  .cta-overlay-gradient {
+    background: linear-gradient(
+      180deg,
+      rgba(14, 11, 10, 0.95) 0%,
+      rgba(17, 13, 11, 0.90) 55%,
+      rgba(20, 16, 14, 0.82) 100%
+    );
+  }
+}
+
+@media (max-width: 520px) {
+  .cta-banner-section {
+    padding: 16px 16px 54px;
+  }
+  .cta-banner-card {
+    border-radius: 20px;
+    padding: 42px 18px 26px; /* Generous top padding away from card border */
+  }
+  .cta-content-col {
+    padding-top: 4px;
+  }
+  .cta-heading {
+    font-size: clamp(19px, 5.8vw, 22px);
+    line-height: 1.28;
+    margin-bottom: 14px;
+  }
+  .cta-subheading {
+    font-size: 13px;
+    margin-bottom: 22px;
+    line-height: 1.62;
+  }
+  .cta-action-btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+    padding: 13px 24px;
+  }
+  /* Distinct top spacing and breathing room for the bottle trio */
+  .cta-flacons-stage {
+    width: 270px;
+    height: 170px;
+    margin-top: 36px; /* Distinct separation from button */
+    padding-top: 10px;
+    margin-bottom: 4px;
+  }
+  .bottle-celestial-wrap {
+    left: 4px;
+    bottom: 6px;
+  }
+  .celestial-bottle {
+    height: 125px;
+  }
+  .bottle-flora-wrap {
+    bottom: 18px;
+  }
+  .flora-bottle {
+    height: 150px;
+  }
+  .bottle-zentus-wrap {
+    right: 4px;
+    bottom: 10px;
+  }
+  .zentus-bottle {
+    height: 128px;
+  }
+}

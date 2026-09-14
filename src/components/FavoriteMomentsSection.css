@@ -1,0 +1,306 @@
+/* ==========================================================================
+   SCENTS STELLAR - REFINED SCENTS FOR EVERY MOMENT (FAVORITE FRAGRANCES)
+   Inspiration: 5-Card Bento Collage Featuring Authentic Client Perfume Flacons
+   ========================================================================== */
+
+.moments-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 95px 32px 105px;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+.moments-container {
+  width: 100%;
+  max-width: 1320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 54px; /* Generous breathing room above images grid */
+}
+
+/* ==========================================================================
+   HEADER: Centered Pill Badge & Heading with Pink Italic Accent & Subtitle
+   ========================================================================== */
+
+.moments-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 720px;
+}
+
+.moments-badge {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  color: #8e7354;
+  background: #f7efe6;
+  border: 1px solid rgba(184, 144, 88, 0.32);
+  border-radius: 999px;
+  padding: 7px 22px;
+  box-shadow: 0 2px 8px rgba(142, 115, 84, 0.08);
+}
+
+.moments-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(26px, 2.7vw, 36px); /* Refined compact size */
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  color: #171412;
+  line-height: 1.2;
+  margin: 14px 0 0;
+}
+
+.moments-pink-italic {
+  font-style: italic;
+  font-weight: 400;
+  color: #c75168; /* Signature luxury pink matching brand theme */
+}
+
+.moments-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(13px, 1.15vw, 14.5px);
+  font-weight: 400;
+  line-height: 1.65;
+  color: #695e55;
+  margin: 12px auto 0;
+  max-width: 620px;
+}
+
+/* ==========================================================================
+   5-CARD BENTO GRID (Left 2 Stacked + Center Tall Hero + Right 2 Stacked)
+   ========================================================================== */
+
+.moments-bento-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.08fr 1fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+/* Columns */
+.moments-col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.moments-center-col {
+  height: 100%;
+}
+
+.center-hero-reveal {
+  height: 100%;
+}
+
+/* Cards - Reduced Height for Compact Elegance */
+.moment-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #171412;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  cursor: pointer;
+  height: 215px; /* Reduced from 260px */
+}
+
+.moment-card.center-hero-card {
+  height: calc(215px * 2 + 18px); /* Reduced to 448px (was 542px) */
+}
+
+.moment-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+}
+
+/* Card Photography */
+.moment-card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.moment-card:hover .moment-card-img {
+  transform: scale(1.035);
+}
+
+/* Dramatic Scrim Overlay for Legibility */
+.moment-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 28%,
+    rgba(0, 0, 0, 0.38) 62%,
+    rgba(0, 0, 0, 0.88) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.moment-card-overlay.center-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.48) 72%,
+    rgba(0, 0, 0, 0.92) 100%
+  );
+}
+
+/* Content & Typography */
+.moment-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 18px 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+  z-index: 2;
+}
+
+.moment-card-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12.5px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #f5f0eb;
+  margin: 0;
+  max-width: 280px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.moment-card-desc.hero-desc {
+  max-width: 310px;
+  font-size: 13px;
+}
+
+/* Circular Action Arrow Button - White Background with Pink Icon (Hover Pink) */
+.moment-arrow-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #c75168; /* Signature pink arrow icon */
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0;
+}
+
+.moment-card:hover .moment-arrow-btn {
+  background: #c75168; /* Hover turns into pink background */
+  color: #ffffff; /* with white arrow */
+  border-color: #c75168;
+  transform: scale(1.12);
+  box-shadow: 0 6px 16px rgba(199, 81, 104, 0.45);
+}
+
+/* ==========================================================================
+   BOTTOM CTA BUTTON: Themed Discover Collection Button
+   ========================================================================= */
+
+.moments-footer-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.moments-discover-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #c75168 0%, #b8863b 100%);
+  color: #ffffff;
+  padding: 13px 36px;
+  border-radius: 999px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 18px rgba(199, 81, 104, 0.32);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.moments-discover-btn:hover {
+  background: linear-gradient(135deg, #b8435a 0%, #a4742e 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(199, 81, 104, 0.45);
+}
+
+.discover-arrow-icon {
+  transition: transform 0.25s ease;
+}
+
+.moments-discover-btn:hover .discover-arrow-icon {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 1060px) {
+  .moments-bento-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .moments-center-col {
+    grid-column: span 2;
+    order: -1;
+  }
+
+  .moment-card.center-hero-card {
+    height: 380px;
+  }
+}
+
+@media (max-width: 720px) {
+  .moments-bento-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .moments-center-col {
+    grid-column: span 1;
+    order: 0;
+  }
+
+  .moment-card,
+  .moment-card.center-hero-card {
+    height: 280px;
+  }
+
+  .moment-card-content {
+    padding: 18px;
+  }
+
+  .moment-card-desc {
+    font-size: 12px;
+  }
+}

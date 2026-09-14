@@ -1,0 +1,317 @@
+/* ==========================================================================
+   SCENTS STELLAR - RECOMMENDATIONS / CURATED COLLECTION SECTION
+   Inspiration: Image 1 (Header & Filter Pills) + Image 2 (Arch Pedestal Cards)
+   ========================================================================== */
+
+.rec-section {
+  width: 100%;
+  background: linear-gradient(180deg, #FBF6F4 0%, #FAF2F0 50%, #FAF5F3 100%);
+  padding: 72px 32px 95px;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgba(199, 81, 104, 0.09);
+  border-bottom: 1px solid rgba(199, 81, 104, 0.09);
+}
+
+.rec-container {
+  width: 100%;
+  max-width: 1320px;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+/* ==========================================================================
+   HEADER ROW: Eyebrow, Compact 2-Line Heading & Right-Aligned Filter Pills
+   ========================================================================== */
+
+.rec-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: nowrap; /* Keeps pills directly on the right side of heading on desktop */
+}
+
+.rec-title-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.rec-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  color: #b05367; /* Harmonious French rose tone matching theme */
+  margin-bottom: 12px;
+}
+
+/* Editorial 2-Line Heading */
+.rec-section-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(27px, 2.8vw, 38px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.3px;
+  color: #1a1715;
+  margin: 0;
+}
+
+.rec-heading-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.rec-personality-italic {
+  display: block;
+  font-style: italic;
+  font-weight: 400;
+  color: #c75168; /* Signature luxury pink matching brand theme */
+}
+
+/* Filter Pills positioned directly to the right of the heading */
+.rec-filter-pills {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  margin-bottom: 2px;
+}
+
+.rec-filter-btn {
+  background: #ffffff;
+  border: 1px solid rgba(184, 144, 88, 0.25);
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #4a3e38;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.rec-filter-btn:hover {
+  background: linear-gradient(135deg, rgba(199, 81, 104, 0.12) 0%, rgba(184, 134, 59, 0.12) 100%);
+  border-color: #c75168;
+  color: #1a1715;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(199, 81, 104, 0.18);
+}
+
+.rec-filter-btn.active {
+  background: linear-gradient(135deg, #c75168 0%, #b8863b 100%);
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(199, 81, 104, 0.35);
+}
+
+.rec-filter-btn.active:hover {
+  background: linear-gradient(135deg, #b8435a 0%, #a4742e 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(199, 81, 104, 0.45);
+}
+
+/* ==========================================================================
+   CARDS GRID: EXACT MATCH TO USER'S REFERENCE IMAGE
+   ========================================================================== */
+
+.rec-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row (2 rows = 8 cards) */
+  gap: 28px 20px;
+  width: 100%;
+}
+
+/* Single Unified Card matching reference image with pronounced luxury shadow */
+.lumiere-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid rgba(184, 144, 88, 0.16);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(35, 18, 22, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.lumiere-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(184, 144, 88, 0.45);
+  box-shadow: 0 20px 45px rgba(35, 18, 22, 0.13), 0 6px 18px rgba(184, 144, 88, 0.12);
+}
+
+/* Warm Studio Surface Image Box */
+.lumiere-img-box {
+  width: 100%;
+  height: 245px;
+  background: linear-gradient(180deg, #FCFAF9 0%, #F6ECE9 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(184, 144, 88, 0.08);
+}
+
+.lumiere-bottle-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 2;
+}
+
+.lumiere-bottle-img {
+  height: clamp(155px, 15vw, 185px);
+  width: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 8px 14px rgba(35, 15, 10, 0.12));
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lumiere-card:hover .lumiere-bottle-img {
+  transform: translateY(-3px);
+}
+
+/* Realistic Ground Shadow Stretching Rightward (matching reference photo) */
+.lumiere-ground-shadow {
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-42%);
+  width: 120px;
+  height: 14px;
+  background: radial-gradient(
+    ellipse at 42% 50%,
+    rgba(50, 30, 15, 0.38) 0%,
+    rgba(50, 30, 15, 0.1) 50%,
+    transparent 75%
+  );
+  border-radius: 50%;
+  filter: blur(3.5px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Product Info Box */
+.lumiere-info-box {
+  padding: 16px 18px 18px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Product Name (Uppercase bold sans-serif matching reference) */
+.lumiere-product-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  color: #1a1715;
+  margin: 0;
+  line-height: 1.25;
+}
+
+/* Key Notes / Accords */
+.lumiere-product-notes {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #766d64;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Price & Plus Button Row */
+.lumiere-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.lumiere-price {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1715;
+  letter-spacing: 0.2px;
+}
+
+/* Luxury Circular Bag Action Button with Champagne Gold Icon & Rose-Gold Hover */
+.lumiere-plus-btn {
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background: #171514;
+  color: #e5cfab; /* Refined champagne gold bag icon */
+  border: 1px solid rgba(229, 207, 171, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(23, 21, 20, 0.22);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0;
+}
+
+.lumiere-plus-btn:hover {
+  background: linear-gradient(135deg, #c75168 0%, #b8863b 100%);
+  color: #ffffff;
+  border-color: transparent;
+  transform: scale(1.12);
+  box-shadow: 0 6px 16px rgba(199, 81, 104, 0.38);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 1160px) {
+  .rec-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .rec-filter-pills {
+    flex-wrap: wrap;
+  }
+
+  .rec-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 680px) {
+  .rec-section {
+    padding: 60px 20px 80px;
+  }
+
+  .rec-cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}

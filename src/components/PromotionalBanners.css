@@ -1,0 +1,414 @@
+/* ==========================================================================
+   SCENTS STELLAR - CURATED PROMOTIONAL BANNERS
+   Inspiration: Luxury Split Banners (Discovery Sets & The Art of Gifting)
+   ========================================================================== */
+
+.promo-banners-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 95px 32px 105px; /* Ample top and bottom breathing room as requested */
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+.promo-banners-container {
+  width: 100%;
+  max-width: 1320px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* Base Banner Card - Elevated Luxury Height */
+.promo-banner-card {
+  border-radius: 14px;
+  overflow: hidden;
+  min-height: 315px;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  position: relative;
+}
+
+.promo-banner-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ==========================================================================
+   THEME 1: DARK LUXURY (Discovery Sets)
+   ========================================================================== */
+
+.promo-banner-card.dark-theme {
+  background: #141312;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+.promo-banner-card.dark-theme:hover {
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.28);
+}
+
+/* ==========================================================================
+   THEME 2: WARM BEIGE LUXURY (The Art of Gifting)
+   ========================================================================== */
+
+.promo-banner-card.beige-theme {
+  background: #d8cec0;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 24px rgba(60, 35, 20, 0.05);
+}
+
+.promo-banner-card.beige-theme:hover {
+  box-shadow: 0 14px 32px rgba(60, 35, 20, 0.1);
+}
+
+/* ==========================================================================
+   LEFT: EDITORIAL CONTENT COLUMN
+   ========================================================================== */
+
+.banner-content-col {
+  padding: 34px 28px 34px 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 5;
+}
+
+.banner-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.banner-eyebrow.dark {
+  color: #c5a067;
+}
+
+.banner-eyebrow.beige {
+  color: #695e50;
+}
+
+.banner-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(23px, 2.2vw, 28px);
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: -0.2px;
+  margin: 0 0 12px;
+}
+
+.banner-heading.dark {
+  color: #ffffff;
+}
+
+.banner-heading.beige {
+  color: #1a1715;
+}
+
+.banner-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12.5px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0 0 22px;
+  max-width: 290px;
+}
+
+.banner-desc.dark {
+  color: #a49a8f;
+}
+
+.banner-desc.beige {
+  color: #554a3e;
+}
+
+/* CTA Action Buttons */
+.banner-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.banner-cta-btn.dark {
+  background: #ede4d6;
+  color: #171514;
+  border: 1px solid #ede4d6;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.banner-cta-btn.dark:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+  transform: translateX(2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.banner-cta-btn.beige {
+  background: #e4dacf;
+  color: #171514;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.banner-cta-btn.beige:hover {
+  background: #f0e7dd;
+  border-color: rgba(0, 0, 0, 0.14);
+  transform: translateX(2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.banner-arrow-icon {
+  transition: transform 0.2s ease;
+}
+
+.banner-cta-btn:hover .banner-arrow-icon {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   RIGHT: VISUAL DISPLAY COLUMN WITH 3-BOTTLE DISCOVERY STAGE
+   ========================================================================== */
+
+.banner-visual-col {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  min-height: 315px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.banner-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.promo-banner-card:hover .banner-bg-img {
+  transform: scale(1.03);
+}
+
+/* Ambient Backlight Glow for the 3 Bottles */
+.banner-trio-glow {
+  position: absolute;
+  bottom: 92px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 90px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(218, 172, 98, 0.28) 0%,
+    rgba(197, 160, 103, 0.08) 50%,
+    transparent 75%
+  );
+  border-radius: 50%;
+  filter: blur(15px);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Curated 3-Bottle Discovery Trio Seated Directly on the Illuminated Podium Slab */
+.banner-bottles-trio {
+  position: absolute;
+  bottom: 74px; /* Perfectly aligns bottle contact planes with the podium surface */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 5;
+  width: auto;
+  max-width: 86%;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.promo-banner-card.dark-theme:hover .banner-bottles-trio {
+  transform: translateX(-50%) translateY(-3px);
+}
+
+.trio-bottle-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  transition: transform 0.3s ease;
+}
+
+/* Left Flanker (Zentus - Emerald & Gold) - Resting on podium left */
+.trio-bottle-item.left-bottle {
+  z-index: 2;
+  margin-right: -15px;
+  transform: translateY(-7px) scale(0.86);
+  filter: brightness(0.92);
+}
+
+/* Center Hero (Celestial - Purple & Gold) - Resting on podium center */
+.trio-bottle-item.center-bottle {
+  z-index: 4;
+  transform: translateY(0) scale(1);
+}
+
+/* Right Flanker (Chrome - Silver & Blue) - Resting on podium right */
+.trio-bottle-item.right-bottle {
+  z-index: 2;
+  margin-left: -15px;
+  transform: translateY(-7px) scale(0.86);
+  filter: brightness(0.92);
+}
+
+.trio-bottle-img {
+  height: clamp(96px, 8.6vw, 114px);
+  width: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.75));
+}
+
+.trio-bottle-img.hero-img {
+  height: clamp(118px, 10.5vw, 138px);
+  filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.88));
+}
+
+/* Realistic Contact Shadows Directly on the Lit Stone Podium */
+.trio-bottle-shadow {
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 46px;
+  height: 6px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    transparent 75%
+  );
+  border-radius: 50%;
+  filter: blur(2px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.trio-bottle-shadow.hero-shadow {
+  width: 62px;
+  height: 8px;
+  bottom: -3px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.98) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    transparent 75%
+  );
+}
+
+/* Banner 2 (Gifting): Floating Scent Stellar Flacon */
+.banner-bottle-float.beige {
+  position: absolute;
+  bottom: 12px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 5;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.promo-banner-card.beige-theme:hover .banner-bottle-float.beige {
+  transform: translateY(-4px);
+}
+
+.banner-real-bottle.beige {
+  height: clamp(155px, 14.5vw, 185px);
+  width: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 12px 24px rgba(45, 25, 15, 0.28));
+}
+
+.banner-bottle-shadow {
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 14px;
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.banner-bottle-shadow.dark {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.2) 60%,
+    transparent 80%
+  );
+  filter: blur(4px);
+}
+
+.banner-bottle-shadow.beige {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(40, 20, 10, 0.45) 0%,
+    rgba(40, 20, 10, 0.1) 60%,
+    transparent 80%
+  );
+  filter: blur(4px);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 1080px) {
+  .promo-banners-container {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 640px) {
+  .promo-banners-section {
+    padding: 10px 20px 80px;
+  }
+
+  .promo-banner-card {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-content-col {
+    padding: 28px 24px;
+  }
+
+  .banner-visual-col {
+    height: 240px;
+    min-height: 240px;
+  }
+}

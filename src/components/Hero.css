@@ -1,0 +1,616 @@
+/* ==========================================================================
+   SCENTS STELLAR - LUXURY HERO SHOWCASE (CLEAN MINIMAL LUXURY AESTHETIC)
+   ========================================================================== */
+
+.hero-showcase-section {
+  width: 100%;
+  position: relative;
+  min-height: calc(100vh - 84px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 32px 110px; /* Refined balanced top spacing */
+  position: relative;
+  transition: background 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Dynamic ambient aura background */
+.hero-dynamic-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  transition: background 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0.95;
+}
+
+/* Main Container: Matches exactly 1320px with the Navbar Pill */
+.hero-showcase-container {
+  width: 100%;
+  max-width: 1320px;
+  display: grid;
+  grid-template-columns: 1.05fr 1.35fr;
+  align-items: center;
+  gap: 32px;
+  position: relative;
+  z-index: 3;
+  height: 100%;
+}
+
+/* ==========================================================================
+   LEFT COLUMN: SIMPLE BRAND LUXURY HEADLINE & REFINED ACTIONS
+   ========================================================================== */
+
+.hero-editorial-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 500px;
+  z-index: 10;
+}
+
+/* Brand Prestige Tag (Clean Text, No Icon) */
+.brand-prestige-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  color: #38322e;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* Luxury Editorial Headline (Playfair Display - Matching About Section) */
+.hero-editorial-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(38px, 4.2vw, 58px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.5px;
+  color: #171514;
+  margin: 0 0 18px;
+}
+
+.title-highlight {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  transition: color 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-block;
+}
+
+/* Clean Short Narrative */
+.hero-clean-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #554d46;
+  margin: 0 0 28px;
+  max-width: 460px;
+}
+
+/* 2 Luxury Action Buttons */
+.hero-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.btn-luxury-discover {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #171514;
+  color: #ffffff;
+  padding: 13px 32px;
+  border-radius: 999px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 18px rgba(23, 21, 20, 0.22);
+}
+
+.btn-luxury-discover:hover {
+  background: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(23, 21, 20, 0.32);
+}
+
+.btn-arrow-icon {
+  transition: transform 0.25s ease;
+}
+
+.btn-luxury-discover:hover .btn-arrow-icon {
+  transform: translateX(4px);
+}
+
+.btn-luxury-contact {
+  display: inline-flex;
+  align-items: center;
+  background: #ffffff;
+  color: #171514;
+  padding: 13px 32px;
+  border-radius: 999px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.btn-luxury-contact:hover {
+  background: #fbf9f8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Subtle Connoisseurs Rating */
+.hero-rating-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.rating-stars-row {
+  display: flex;
+  gap: 2px;
+}
+
+.rating-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #7a7168;
+}
+
+/* ==========================================================================
+   RIGHT COLUMN: BOTTLE + ENLARGED GLASS ARCH + SHIFTED LEFTWARD
+   ========================================================================== */
+
+.hero-stage-col {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  height: 100%;
+  transform: translateX(-42px); /* Shifted entire section leftward as requested */
+}
+
+/* Central Bottle Presentation Container */
+.stage-bottle-center {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-right: 32px;
+}
+
+/* Ultra-Light Frosted Glass Effect Arch Backdrop (Enlarged Size) */
+.stage-luxury-arch {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 550px;
+  border-radius: 250px 250px 32px 32px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(255, 255, 255, 0.06) 50%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  box-shadow: 
+    0 18px 42px rgba(180, 110, 125, 0.03),
+    inset 0 1px 14px rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Luminous Ambient Halo Glow */
+.stage-halo-light {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.72;
+  animation: haloPulse 5s ease-in-out infinite alternate;
+}
+
+/* Flacon Presentation Box */
+.bottle-presentation-box {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: flaconEnter 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Main Perfume Bottle: Sized for balanced framing */
+.stage-active-bottle {
+  height: clamp(420px, 56vh, 530px);
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 32px rgba(35, 15, 10, 0.24));
+  transform-origin: bottom center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+  cursor: pointer;
+  animation: subtleFloat 5s ease-in-out infinite alternate;
+}
+
+.stage-active-bottle:hover {
+  transform: translateY(-6px) scale(1.02);
+  filter: drop-shadow(0 24px 40px rgba(35, 15, 10, 0.3));
+}
+
+/* Natural Soft Ground Contact Shadows */
+.natural-bottle-shadow {
+  position: absolute;
+  bottom: 8px;
+  width: 255px;
+  height: 20px;
+  background: radial-gradient(ellipse at center, rgba(40, 18, 12, 0.42) 0%, rgba(40, 18, 12, 0.12) 50%, transparent 75%);
+  border-radius: 50%;
+  filter: blur(6px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.natural-ambient-shadow {
+  position: absolute;
+  bottom: -4px;
+  width: 360px;
+  height: 38px;
+  background: radial-gradient(ellipse at center, rgba(60, 25, 20, 0.16) 0%, rgba(60, 25, 20, 0.04) 55%, transparent 75%);
+  border-radius: 50%;
+  filter: blur(14px);
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   VERTICAL FRAGRANCE LIST: BOTTLES ON TOP, NAMES UNDERNEATH
+   ========================================================================== */
+
+.vertical-perfume-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  z-index: 15;
+  align-self: center;
+  transform: translateY(14px); /* Perfectly centers the cards against the glass arch */
+}
+
+.v-perfume-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 10px 8px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  border-radius: 18px;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  box-shadow: 0 4px 14px rgba(180, 110, 120, 0.06);
+  width: 78px;
+}
+
+.v-perfume-item:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 20px rgba(180, 110, 120, 0.12);
+}
+
+.v-perfume-item.active {
+  background: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 8px 24px rgba(180, 110, 120, 0.16), 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* Bottle Image Wrap */
+.v-item-bottle-wrap {
+  width: 44px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.v-item-bottle-img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.14));
+  transition: transform 0.3s ease;
+}
+
+.v-perfume-item:hover .v-item-bottle-img,
+.v-perfume-item.active .v-item-bottle-img {
+  transform: scale(1.08);
+}
+
+/* Fragrance Name Underneath */
+.v-item-bottle-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #2b2724;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Active Indicator Dot */
+.v-item-active-dot {
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 3px;
+  border-radius: 999px;
+  animation: indicatorPop 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ==========================================================================
+   KEYFRAME ANIMATIONS
+   ========================================================================== */
+
+@keyframes heroLeftFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flaconEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes subtleFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes haloPulse {
+  0% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(0.94);
+  }
+  100% {
+    opacity: 0.95;
+    transform: translate(-50%, -50%) scale(1.06);
+  }
+}
+
+@keyframes indicatorPop {
+  0% {
+    transform: translateX(-50%) scaleX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) scaleX(1);
+    opacity: 1;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (PRESERVES 100VH NO-SCROLL ON DESKTOPS)
+   ========================================================================== */
+
+@media (max-width: 1280px) {
+  .hero-showcase-container {
+    gap: 20px;
+    grid-template-columns: 1fr 1.25fr;
+  }
+  .stage-bottle-center {
+    margin-right: 24px;
+  }
+  .stage-active-bottle {
+    height: clamp(380px, 56vh, 480px);
+  }
+  .stage-luxury-arch {
+    width: 380px;
+    height: 490px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-showcase-section {
+    height: auto;
+    max-height: none;
+    padding: 38px 20px 54px; /* Reduced top spacing after navbar on tablets */
+    overflow-y: auto;
+  }
+  .hero-showcase-container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .hero-editorial-col {
+    max-width: 100%;
+    order: 2;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-clean-description {
+    max-width: 100%;
+  }
+  .hero-stage-col {
+    order: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transform: none !important; /* Reset desktop -42px shift so bottle & arch are perfectly centered */
+    width: 100%;
+    margin: 0 auto;
+  }
+  .stage-bottle-center {
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .stage-luxury-arch {
+    width: min(340px, 86vw);
+    height: 420px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .stage-halo-light {
+    width: min(320px, 80vw);
+    height: 320px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .bottle-presentation-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .natural-bottle-shadow {
+    width: min(200px, 60vw);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .natural-ambient-shadow {
+    width: min(280px, 76vw);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .vertical-perfume-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 16px auto 0;
+    transform: none;
+  }
+  .stage-active-bottle {
+    height: 340px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-showcase-section {
+    padding: 30px 16px 46px; /* Reduced top spacing after navbar on mobile */
+  }
+  .hero-editorial-title {
+    font-size: clamp(26px, 8vw, 36px);
+  }
+  .hero-stage-col {
+    transform: none !important;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .stage-bottle-center {
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .stage-luxury-arch {
+    width: min(280px, 84vw);
+    height: 360px;
+    border-radius: 140px 140px 20px 20px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .stage-active-bottle {
+    height: 275px;
+    margin: 0 auto;
+  }
+  .hero-btn-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .btn-luxury-discover,
+  .btn-luxury-contact {
+    width: 100%;
+    justify-content: center;
+  }
+  .v-perfume-item {
+    padding: 5px 8px;
+  }
+  .v-perfume-thumb-wrap {
+    width: 32px;
+    height: 40px;
+  }
+  .v-perfume-name {
+    font-size: 8.5px;
+  }
+}
